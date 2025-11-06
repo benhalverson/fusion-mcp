@@ -1,0 +1,10 @@
+# Example environment variables for local development
+# Copy this file to .dev.vars and fill in your actual credentials
+
+# Autodesk Forge/APS API Credentials
+# Get these from https://forge.autodesk.com/
+FORGE_CLIENT_ID=your_forge_client_id_here
+FORGE_CLIENT_SECRET=your_forge_client_secret_here
+
+# Optional: OAuth callback URL
+# FORGE_CALLBACK_URL=https://your-worker.workers.dev/callback

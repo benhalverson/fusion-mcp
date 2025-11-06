@@ -1,0 +1,14 @@
+name = "fusion-mcp"
+main = "src/index.ts"
+compatibility_date = "2024-11-06"
+
+# Environment variables for Autodesk Forge/APS API
+# Set these using: wrangler secret put <KEY>
+# Required secrets:
+# - FORGE_CLIENT_ID
+# - FORGE_CLIENT_SECRET
+# - FORGE_CALLBACK_URL (optional, for OAuth)
+
+[vars]
+# Public variables (non-sensitive)
+FORGE_API_BASE = "https://developer.api.autodesk.com"
