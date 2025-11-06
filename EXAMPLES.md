@@ -5,7 +5,7 @@ This directory contains example scripts and configurations for using the Fusion 
 ## Quick Start
 
 1. Set up your Forge credentials in `.dev.vars`
-2. Run the development server: `npm run dev`
+2. Run the development server: `pnpm run dev`
 3. Test the endpoints using the examples below
 
 ## Example MCP Requests

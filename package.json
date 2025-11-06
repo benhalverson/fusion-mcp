@@ -10,7 +10,7 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/**/*.ts",
-    "test": "npm run build && node dist/tests/basic.test.js"
+    "test": "pnpm run build && node dist/tests/basic.test.js"
   },
   "keywords": [
     "mcp",
@@ -23,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
+    "forge-server-utils": "^9.0.5",
     "hono": "^4.6.14"
   },
   "devDependencies": {

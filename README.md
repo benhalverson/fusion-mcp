@@ -34,7 +34,7 @@ This MCP server provides the following capabilities for interacting with Autodes
 ### 1. Install Dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 2. Configure Autodesk Forge Credentials
@@ -64,7 +64,7 @@ wrangler secret put FORGE_CLIENT_SECRET
 Run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 The server will be available at `http://localhost:8787`
@@ -74,13 +74,13 @@ The server will be available at `http://localhost:8787`
 Compile TypeScript to JavaScript:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ### 5. Deploy to Cloudflare Workers
 
 ```bash
-npm run deploy
+pnpm run deploy
 ```
 
 ## Usage

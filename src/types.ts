@@ -55,6 +55,41 @@ export interface DesignParameter {
   expression?: string;
 }
 
+export interface WorkItemArgument {
+  url?: string;
+  verb?: string;
+  localName?: string;
+}
+
+export interface WorkItemArguments {
+  inputFile: WorkItemArgument;
+  outputFile: WorkItemArgument;
+  parameters?: WorkItemArgument;
+  [key: string]: WorkItemArgument | undefined;
+}
+
+export interface WorkItem {
+  activityId: string;
+  arguments: WorkItemArguments;
+}
+
+export interface ItemDataRelationship {
+  data?: {
+    id?: string;
+  };
+}
+
+export interface ItemDataRelationships {
+  storage?: ItemDataRelationship;
+  derivatives?: ItemDataRelationship;
+}
+
+export interface ItemData {
+  data: {
+    relationships?: ItemDataRelationships;
+  };
+}
+
 export interface Env {
   FORGE_CLIENT_ID: string;
   FORGE_CLIENT_SECRET: string;

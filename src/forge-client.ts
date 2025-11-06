@@ -1,4 +1,4 @@
-import { Env, ForgeToken } from './types.js';
+import { Env, ForgeToken, WorkItem, ItemData } from './types.js';
 
 /**
  * Autodesk Forge API client
@@ -203,10 +203,10 @@ export class ForgeClient {
   /**
    * Create a work item to run Fusion script
    */
-  async createWorkItem(activityId: string, inputFileUrl: string, outputFileUrl: string, parameters?: Record<string, any>) {
+  async createWorkItem(activityId: string, inputFileUrl: string, outputFileUrl: string, parameters?: Record<string, unknown>) {
     const token = await this.getToken();
     
-    const workItem: any = {
+    const workItem: WorkItem = {
       activityId: activityId,
       arguments: {
         inputFile: {
@@ -283,7 +283,7 @@ export class ForgeClient {
       throw new Error(`Failed to get item/version details: ${itemResponse.statusText}`);
     }
 
-    const itemData: any = await itemResponse.json();
+    const itemData = await itemResponse.json() as ItemData;
     const storageId = itemData.data.relationships?.storage?.data?.id || 
                       itemData.data.relationships?.derivatives?.data?.id;
 

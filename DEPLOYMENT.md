@@ -5,7 +5,7 @@ This guide will walk you through deploying the Fusion MCP Server to Cloudflare W
 ## Prerequisites
 
 1. A Cloudflare account (free tier is sufficient)
-2. Wrangler CLI installed (comes with the project's npm dependencies)
+2. Wrangler CLI installed (comes with the project's pnpm dependencies)
 3. Autodesk Forge/APS account with API credentials
 
 ## Step 1: Get Autodesk Forge Credentials
@@ -29,7 +29,7 @@ This guide will walk you through deploying the Fusion MCP Server to Cloudflare W
 ## Step 2: Install Dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Step 3: Authenticate with Cloudflare
@@ -55,7 +55,7 @@ npx wrangler secret put FORGE_CLIENT_SECRET
 ## Step 5: Deploy
 
 ```bash
-npm run deploy
+pnpm run deploy
 ```
 
 This will build and deploy your worker to Cloudflare. The output will show your worker's URL, something like:
@@ -110,7 +110,7 @@ FORGE_CLIENT_SECRET=your_client_secret_here
 Run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 The server will be available at `http://localhost:8787`
@@ -131,9 +131,9 @@ The following environment variables are used:
 To update your deployment after making changes:
 
 1. Make your code changes
-2. Test locally with `npm run dev`
-3. Run tests with `npm test`
-4. Deploy with `npm run deploy`
+2. Test locally with `pnpm run dev`
+3. Run tests with `pnpm test`
+4. Deploy with `pnpm run deploy`
 
 ## Monitoring
 
@@ -156,8 +156,8 @@ If you get authentication errors:
 ### Module Not Found Errors
 
 If you get module resolution errors:
-- Run `npm install` to ensure all dependencies are installed
-- Delete `node_modules` and `package-lock.json`, then reinstall
+- Run `pnpm install` to ensure all dependencies are installed
+- Delete `node_modules` and `pnpm-lock.yaml`, then reinstall
 
 ### CORS Issues
 
